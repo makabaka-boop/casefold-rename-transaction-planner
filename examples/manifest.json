@@ -1,0 +1,10 @@
+{
+  "files": ["README.md", "NOTES.txt", "Archive.zip", "Photo.JPG", "old.log"],
+  "mappings": [
+    {"source": "README.md", "target": "readme.md"},
+    {"source": "NOTES.txt", "target": "Archive.zip"},
+    {"source": "Archive.zip", "target": "notes.txt"},
+    {"source": "Photo.JPG", "target": "photo.jpg"},
+    {"source": "old.log", "target": "history.log"}
+  ]
+}

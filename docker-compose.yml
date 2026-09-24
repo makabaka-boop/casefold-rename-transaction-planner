@@ -1,0 +1,17 @@
+services:
+  planner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: renameplanner:local
+    command: ["/manifest.json"]
+    network_mode: none
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    # The container only reads the manifest copied into the image. To test with
+    # a host file, mount it read-only, for example:
+    #   docker compose run --rm \
+    #     -v "$PWD/examples/manifest.json:/manifest.json:ro" planner
